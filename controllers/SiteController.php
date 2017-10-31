@@ -164,6 +164,7 @@ class SiteController extends Controller
         $this->layout = 'depan';
          return $this->render('index');
     }
+
     /**
      * Displays contact page.
      *
@@ -182,15 +183,10 @@ class SiteController extends Controller
         ]);
     }
 
-    /**
-     * Displays about page.
-     *
-     * @return string
-     */
-    public function actionAbout()
+    public function actionTentang()
     {
-        return $this->render('about');
+        $this->layout = 'tentang';
+         return $this->render('index');
     }
-
 
 }

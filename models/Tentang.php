@@ -3,6 +3,8 @@
 namespace app\models;
 
 use Yii;
+use yii\helpers\Html;
+use yii\Helpers\ArrayHelper;
 
 /**
  * This is the model class for table "tentang".
@@ -46,4 +48,14 @@ class Tentang extends \yii\db\ActiveRecord
             'gambar' => 'Gambar',
         ];
     }
+     public function getGambar($htmlOptions=[])
+    {
+        //jika file ada dalam direktori
+        if($this->gambar == null && !file_exists('@web/uploads/'.$this->gambar)){
+            return Html::img('@web/images/pakar.jpg', $htmlOptions);
+        } else {
+            return Html::img('@web/uploads/'.$this->gambar, $htmlOptions);
+        }
+    }
 }
+

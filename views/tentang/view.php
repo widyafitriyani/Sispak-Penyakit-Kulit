@@ -23,11 +23,6 @@ $this->params['breadcrumbs'][] = $this->title;
         'template' => '<tr><th width="180px" style="text-align:right">{label}</th><td>{value}</td></tr>',
         'attributes' => [
             [
-                'attribute' => 'id',
-                'format' => 'raw',
-                'value' => $model->id,
-            ],
-            [
                 'attribute' => 'nama',
                 'format' => 'raw',
                 'value' => $model->nama,
@@ -39,10 +34,10 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
             [
                 'attribute' => 'gambar',
-                'format' => 'raw',
-                'value' => $model->gambar,
+               'format' => 'raw',
+                 'value' => Html::img('@web/uploads/'.$model->gambar,['width'=>'100px']),
             ],
-        ],
+            ],
     ]) ?>
 
     </div>

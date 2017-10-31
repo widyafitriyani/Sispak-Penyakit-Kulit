@@ -8,6 +8,7 @@ use app\models\TentangSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * TentangController implements the CRUD actions for Tentang model.
@@ -68,26 +69,27 @@ class TentangController extends Controller
     public function actionCreate()
     {
         $model = new Tentang();
-
-        $referrer = Yii::$app->request->referrer;
-
-        if ($model->load(Yii::$app->request->post())) {
-
-            $referrer = $_POST['referrer'];
-
-            if($model->save()) {
-                Yii::$app->session->setFlash('success','Data berhasil disimpan.');
-                return $this->redirect($referrer);
+        if ($model->load(Yii::$app->request->post()) ) {
+            
+            $gambar = UploadedFile::getInstance($model,'gambar');
+            if($gambar !== null){
+                $model->gambar = $gambar->baseName . Yii::$app->formatter->asTimestamp(date('Y')) . '.' . $gambar->extension;
+                /*print $cover->extension;
+                die;*/
             }
-
-            Yii::$app->session->setFlash('error','Data gagal disimpan. Silahkan periksa kembali isian Anda.');
-
-        }
-
-        return $this->render('create', [
-            'model' => $model,
-            'referrer'=>$referrer
-        ]);
+            if($model->save()) {
+                    if ($gambar!==null) {
+                        $path = Yii::getAlias('@app').'/web/uploads/';
+                        $gambar->saveAs($path.$model->gambar, false);
+                }
+            Yii::$app->session->setFlash('success','Data berhasil disimpan.');
+            return $this->redirect(['view', 'id' => $model->id]);
+             }
+             Yii::$app->session->setFlash('error','Data gagal disimpan. Silahkan periksa kembali isian Anda.');
+        } 
+            return $this->render('create', [
+                'model' => $model,
+            ]);
 
     }
 
@@ -100,29 +102,27 @@ class TentangController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
-        $referrer = Yii::$app->request->referrer;
-
-        if ($model->load(Yii::$app->request->post())) {
-
-            $referrer = $_POST['referrer'];
-
-            if($model->save())
-            {
-                Yii::$app->session->setFlash('success','Data berhasil disimpan.');
-                return $this->redirect($referrer);
+        $foto_lama = $model->gambar;
+        if ($model->load(Yii::$app->request->post()) ) {
+            $gambar = UploadedFile::getInstance($model,'gambar');
+             if($gambar !== null){
+                $model->gambar = $gambar->baseName . Yii::$app->formatter->asTimestamp(date('Y-d-m h:i:s')) . '.' . $gambar->extension;
+            } else {
+                $model->gambar = $foto_lama;
             }
-
+            if($model->save()) {
+                    if ($gambar!==null) {
+                        $path = Yii::getAlias('@app').'/web/uploads/';
+                        $gambar->saveAs($path.$model->gambar, false);
+                     }
+            Yii::$app->session->setFlash('success','Data berhasil disimpan.');
+            return $this->redirect(['view', 'id' => $model->id]);
+            } 
             Yii::$app->session->setFlash('error','Data gagal disimpan. Silahkan periksa kembali isian Anda.');
-
-
         }
-
-        return $this->render('update', [
-            'model' => $model,
-            'referrer'=>$referrer
-        ]);
-
+            return $this->render('update', [
+                'model' => $model,
+            ]);
     }
 
     /**

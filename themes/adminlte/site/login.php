@@ -21,7 +21,7 @@ $fieldOptions2 = [
 ?>
 <div  class="login-pages">
             <div class="login-logo">
-              <p style="font-weight: bold; color: #2eb5a6">Sistem Pakar Diagnosa Penyakit Kulit</p>
+              <p style="font-weight: bold; color: #56B4E9">Sistem Pakar Diagnosa Penyakit Kulit</p>
               <p class="txt-l" style="font-weight: bold">Rumah Sakit Kab Indramayu</p>
 
             </div>

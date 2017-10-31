@@ -35,9 +35,7 @@ use yii\bootstrap\ActiveForm;
 
         <?= $form->field($model, 'isi')->textarea(['rows' => 6]) ?>
 
-        <?= $form->field($model, 'gambar')->textInput(['maxlength' => true]) ?>
-
-        <?= Html::hiddenInput('referrer',$referrer); ?>
+        <?= $form->field($model, 'gambar')->FileInput() ?>
 
 	</div>
     <div class="box-footer">

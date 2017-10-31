@@ -13,7 +13,6 @@ $this->params['breadcrumbs'][] = Yii::t('app', 'Sunting');
 
     <?= $this->render('_form', [
         'model' => $model,
-        'referrer'=> $referrer
     ]) ?>
 
 </div>

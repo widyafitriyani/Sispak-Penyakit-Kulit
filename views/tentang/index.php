@@ -48,10 +48,11 @@ $this->params['breadcrumbs'][] = $this->title;
             [
                 'attribute' => 'gambar',
                 'format' => 'raw',
-                'headerOptions' => ['style' => 'text-align:center;'],
-                'contentOptions' => ['style' => 'text-align:center;'],
+                'headerOptions' => ['style' => 'width:100px'],
+            'value' => function($data){
+                    return $data->getGambar(['class'=>'img-responsive']);
+                },
             ],
-
             [
                 'class' => 'yii\grid\ActionColumn',
                 'contentOptions' => ['style' => 'text-align:center;width:80px']
