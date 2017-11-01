@@ -69,6 +69,10 @@ class Pasien extends \yii\db\ActiveRecord
     {
         return $this->hasOne(JenisKelamin::className(), ['id' => 'id_jenis_kelamin']);
     }
+     public static function getCount()
+    {
+        return self::find()->count();
+    }
 
     public function getGambar($htmlOptions=[])
     {

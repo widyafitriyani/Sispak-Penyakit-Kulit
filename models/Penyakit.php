@@ -56,7 +56,28 @@ class Penyakit extends \yii\db\ActiveRecord
             
         ];
     }
+    public static function getCount()
+    {
+        return self::find()->count();
+    }
 
+     public static function getGrafikPerPenyakit()
+    {
+        $chart = null;
+
+        foreach(Penyakit::find()->all() as $data)
+        {
+            $chart .= '{"label":"'.$data->nama.'","value":"'.$data->getCountGrafik().'"},';
+        }
+        return $chart;
+
+    }
+     public function getCountGrafikPenyakit()
+    {
+     return Penyakit::find()
+    ->andWhere(['id_penyakit' => $this->id])
+    ->count();
+    }
    public function getPhoto($htmlOptions=[])
     {
         //jika file ada dalam direktori
