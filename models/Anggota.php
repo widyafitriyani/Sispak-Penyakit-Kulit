@@ -39,12 +39,17 @@ class Anggota extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['nama', 'alamat', 'photo', 'id_jenis_kelamin', 'email', 'tanggal_lahir', 'username', 'password', 'password_konfirmasi'], 'required'],
+            ['username', 'unique', 'targetClass' => '\app\models\User', 'message' => '{attribute} Sudah Ada'],
+            ['password_konfirmasi', 'validatePassword'],
+            [['nama'],'unique','message' => '{attribute} Pengguna Sudah Ada'],
+            [['nama', 'alamat', 'id_jenis_kelamin', 'email', 'tanggal_lahir','username','password','password_konfirmasi'], 'required','message' => '{attribute} Tidak Boleh Kosong'],
             [['alamat'], 'string'],
             [['id_jenis_kelamin'], 'integer'],
-            [['tanggal_lahir'], 'safe'],
-            [['nama', 'photo', 'email'], 'string', 'max' => 255],
-            [['id_jenis_kelamin'], 'exist', 'skipOnError' => true, 'targetClass' => JenisKelamin::className(), 'targetAttribute' => ['id_jenis_kelamin' => 'id']],
+            [['photo'], 'safe'],
+            [['nama', 'email','photo'], 'string', 'max' => 255],
+            [['email'],'email'],
+            [['photo'], 'string', 'max' => 255],
+            ['photo', 'file', 'extensions' => ['png', 'jpg', 'jpeg', 'gif'], 'maxSize' => 1024 * 1024 * 2],
         ];
     }
 
