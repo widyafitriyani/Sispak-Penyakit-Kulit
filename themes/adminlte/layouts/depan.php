@@ -78,15 +78,15 @@ AppAsset::register($this);
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <?= Html::img("@web/images/widya2.png",['style' => 'width: 100%']); ?>
+        <?= Html::img("@web/images/widyaa.png",['style' => 'width: 100%']); ?>
       </div>
 
       <div class="item">
-        <?= Html::img("@web/images/widya1.png",['style' => 'width: 100%']); ?>
+        <?= Html::img("@web/images/widya2.png",['style' => 'width: 100%']); ?>
       </div>
     
       <div class="item">
-        <?= Html::img("@web/images/widyaa.png",['style' => 'width: 100%']); ?>
+        <?= Html::img("@web/images/widya1.png",['style' => 'width: 100%']); ?>
       </div>
     </div>
 
@@ -112,26 +112,32 @@ AppAsset::register($this);
               <div class="row">
               <div class="col-md-4 col-sm-4 col-xs-12 canvas-box magin30 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">
                         <span class="text-center"><i class="icon-icons42 color40"></i></span>
-                        <h4 class="color30"><?= Html::a('Pengertian Sistem Pakar', ['site/index'], ['class' => 'color30']); ?></h4>
-                        <?= Html::img("@web/images/gambar3.png",['style' => 'width: 80%']); ?>
+                        <h4 class="color30"><?= Html::a('Apa itu penyakit kulit?', ['site/index'], ['class' => 'color30']); ?></h4>
+                        <?= Html::img("@web/images/analisa.png",['style' => 'width: 80%']); ?>
                         <p class="font-depan">
-                            "Sistem Pakar(dalam bahasa Inggris :expert system) adalah sistem informasi yang berisi dengan pengetahuan dari pakar sehingga dapat digunakan untuk konsultasi. Pengetahuan dari pakar di dalam sistem ini digunakan sebagi dasar oleh Sistem Pakar untuk menjawab pertanyaan (konsultasi). Kepakaran (expertise) adalah pengetahuan yang ekstensif dan spesifik yang diperoleh melalui rangkaian pelatihan, membaca, dan peng"
+                            Kulit merupakan salah satu panca indera manusia dan
+                            bagian pertama yang dapat menerima rangsangan dari
+                            luar. Kesehatan kulit menjadi hal yang sangat penting
+                            sebagai pelindung organ-organ tubuh yang ada
+                            didalamnya, sehingga kulit yang tidak terjaga
+                            kesehatannya akan menimbulkan berbagai penyakit dan
+                            gangguan pada kulit
                         </p>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 canvas-box magin30 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">
                         <span class="text-center"><i class="icon-icons42 color40"></i></span>
-                        <h4 class="color30"><?= Html::a('Penyakit Kulit', ['site/index'], ['class' => 'color30']); ?></h4>
-                        <?= Html::img("@web/images/widyaa.png",['style' => 'width: 100%']); ?>
+                        <h4 class="color30"><?= Html::a('Tingkatan menentukan pengobatan penyakit kulit', ['site/index'], ['class' => 'color30']); ?></h4>
+                        <?= Html::img("@web/images/analisa.png",['style' => 'width: 80%']); ?>
                         <p class="font-depan">
-                            "Yang menganalisis informasi (biasanya diberikan oleh pengguna suatu sistem) mengenai suatu kelas masalah spesifik serta analisis matematis dari masalah tersebut. Tergantung dari desainnya, sistem pakar juga mampu merekomendasikan suatu rangkaian tindakan pengguna untuk dapat menerapkan koreksi. Sistem ini memanfaatkan kapabilitas penalaran untuk mencapai suatu simpulan"
+                            Yang menganalisis informasi (biasanya diberikan oleh pengguna suatu sistem) mengenai suatu kelas masalah spesifik serta analisis matematis dari masalah tersebut. Tergantung dari desainnya, sistem pakar juga mampu merekomendasikan suatu rangkaian tindakan pengguna untuk dapat menerapkan 
                         </p>
                     </div>
                     <div class="col-md-4 col-sm-4 col-xs-12 canvas-box magin30 text-center wow fadeInDown" data-wow-duration="500ms" data-wow-delay="300ms">
                         <span class="text-center"><i class="icon-icons42 color40"></i></span>
-                        <h4 class="color30"><?= Html::a('Bahaya nya Penyakit Kulit', ['site/index'], ['class' => 'color30']); ?></h4>
-                        <?= Html::img("@web/images/widya.png",['style' => 'width: 100%']); ?>
+                        <h4 class="color30"><?= Html::a('Apa itu sistem pakar?', ['site/index'], ['class' => 'color30']); ?></h4>
+                        <?= Html::img("@web/images/analisa.png",['style' => 'width: 80%']); ?>
                         <p class="font-depan">
-                            "Kepakaran mempunyai sifat berjenjang, pakar top memiliki pengetahuan lebih banyak daripada pakar yunior. Tujuan Sistem Pakar adalah untuk mentransfer kepakaran dari seorang pakar ke komputer, kemudian ke orang lain (yang bukan pakar). Sistem pakar adalah suatu program komputer yang mengandung pengetahuan dari satu atau lebih pakar manusia mengenai suatu bidang spesifik. Jenis program ini pertama kali dikembangkan oleh periset kecerdasan buatan pada dasawarsa 1960-an dan 1970-an dan diterapkan"
+                            Kepakaran mempunyai sifat berjenjang, pakar top memiliki pengetahuan lebih banyak daripada pakar yunior. Tujuan Sistem Pakar adalah untuk mentransfer kepakaran dari seorang pakar ke komputer, kemudian ke orang lain (yang bukan pakar). Sistem pakar adalah suatu program komputer yang 
                         </p>
                     </div>
     

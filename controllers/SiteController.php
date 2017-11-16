@@ -136,7 +136,7 @@ class SiteController extends Controller
 
         $model = new Anggota();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save(false)) {
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->createUser();
             /*$model->sendMailToUser();
             $model->sendMailToAdmin();*/

@@ -5,7 +5,7 @@ namespace app\models;
 use Yii;
 use yii\helpers\Html;
 use yii\Helpers\ArrayHelper;
-
+use app\models\User;
 /**
  * This is the model class for table "tentang".
  *

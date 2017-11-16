@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\AnggotaSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Daftar Anggota');
+$this->title = Yii::t('app', 'Daftar Pasien');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="anggota-index box box-primary">

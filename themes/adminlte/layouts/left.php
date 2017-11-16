@@ -85,11 +85,11 @@
                 'options' => ['class' => 'sidebar-menu'],
                 'items' => [
                      ['label' => 'Dashboard', 'icon' => 'home', 'url' => ['site/index'],],
-                     ['label' => 'Anggota', 'icon' => 'circle-o', 'url' => ['anggota/index']],
+                     ['label' => 'Pasien', 'icon' => 'circle-o', 'url' => ['anggota/index']],
                      ['label' => 'Penyakit', 'icon' => 'circle-o', 'url' => ['penyakit/index']],
                      ['label' => 'Pertanyaan', 'icon' => 'circle-o', 'url' => ['pertanyaan/index']],
                      ['label' => 'Diagnosa', 'icon' => 'circle-o', 'url' => ['diagnosa/index']],
-                     ['label' => 'Pasien', 'icon' => 'circle-o', 'url' => ['pasien/index']],
+                    /* ['label' => 'Pasien', 'icon' => 'circle-o', 'url' => ['pasien/index']],*/
                      ['label' => 'Diagnosa Detail', 'icon' => 'circle-o', 'url' => ['diagnosa-detail/index']],
                      ['label' => 'Jenis Kelamin', 'icon' => 'circle-o', 'url' => ['jenis-kelamin/index']],
                      ['label' => 'Tentang', 'icon' => 'circle-o', 'url' => ['tentang/index']],
